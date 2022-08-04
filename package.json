@@ -1,0 +1,20 @@
+{
+  "devDependencies": {
+    "turbo": "^1.4.2"
+  },
+  "license": "MIT",
+  "main": "index.js",
+  "name": "turbo-test",
+  "private": true,
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "lint": "turbo run lint",
+    "test": "turbo run test"
+  },
+  "version": "1.0.0",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ]
+}
