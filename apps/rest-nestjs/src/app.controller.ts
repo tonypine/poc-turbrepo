@@ -16,7 +16,7 @@ export class AppController {
   constructor(private readonly prismaService: PrismaService) {}
 
   @Get('post/:id')
-  async getPostById(@Param('id') id: string): Promise<PostModel> {
+  async getPostById(@Param('id') id: string): Promise<PostModel | null> {
     return this.prismaService.post.findUnique({ where: { id: Number(id) } });
   }
 
@@ -90,6 +90,7 @@ export class AppController {
     userData: {
       name?: string;
       email: string;
+      age: number;
       posts?: Prisma.PostCreateInput[];
     },
   ): Promise<UserModel> {
@@ -99,7 +100,8 @@ export class AppController {
     }));
     return this.prismaService.user.create({
       data: {
-        name: userData?.name,
+        name: userData?.name || 'John Doe',
+        age: userData.age,
         email: userData.email,
         posts: {
           create: postData,

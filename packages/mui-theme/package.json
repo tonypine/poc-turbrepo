@@ -15,11 +15,11 @@
   "license": "MIT",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
   "name": "@mact/mui-theme",
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch --format esm,cjs --dts"
   },
-  "types": "./dist/index.d.ts",
   "version": "1.0.0"
 }

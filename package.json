@@ -9,9 +9,10 @@
   "private": true,
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev --parallel",
+    "dev": "turbo run dev --no-cache",
     "lint": "turbo run lint",
-    "test": "turbo run test"
+    "test": "turbo run test",
+    "migrate": "turbo run migrate"
   },
   "version": "1.0.0",
   "workspaces": [
