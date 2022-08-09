@@ -1,0 +1,11 @@
+{
+  "files": [
+    "client.json",
+    "backend.json"
+  ],
+  "license": "MIT",
+  "main": "index.js",
+  "name": "@mact/ts-config",
+  "private": true,
+  "version": "1.0.0"
+}

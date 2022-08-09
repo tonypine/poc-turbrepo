@@ -1,18 +1,22 @@
-import {
-  createTheme,
-  PaletteColor,
-  PaletteColorOptions,
-  PaletteTextChannel,
-  TypeText,
-} from '@mui/material';
-import {} from '@mui/material/colors';
+import { createTheme, PaletteColorOptions, TypeText } from '@mui/material';
+import tokens from '@mact/design-tokens';
 
 const primary: PaletteColorOptions = {
-  main: '#3b82f6',
+  main: tokens.colors.brand.main,
+  // dark: tokens.colors.brand.dark,
+  // light: tokens.colors.brand.light,
+  contrastText: 'white',
+};
+
+const secondary: PaletteColorOptions = {
+  main: tokens.colors.brand.dark,
+  // dark: tokens.colors.secondary.dark,
+  // light: tokens.colors.secondary.light,
+  contrastText: 'white',
 };
 
 const textColor: TypeText = {
-  primary: '#222',
+  primary: tokens.colors.brand.dark,
   secondary: '#666',
   disabled: '#999',
 };
@@ -20,7 +24,12 @@ const textColor: TypeText = {
 const theme = createTheme({
   palette: {
     primary,
+    secondary,
     text: textColor,
+  },
+  typography: {
+    fontSize: 14,
+    htmlFontSize: 16,
   },
   components: {
     MuiButton: {

@@ -1,0 +1,20 @@
+{
+  "name": "@mact/design-tokens",
+  "version": "1.0.0",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "license": "MIT",
+  "dependencies": {
+    "@mact/eslint-config": "*",
+    "typescript": "^4.7.4"
+  },
+  "devDependencies": {
+    "@tsconfig/recommended": "^1.0.1",
+    "tsup": "^6.2.1"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch --format esm,cjs --dts"
+  }
+}

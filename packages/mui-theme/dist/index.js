@@ -1,7 +1,9 @@
 "use strict";
+var __create = Object.create;
 var __defProp = Object.defineProperty;
 var __getOwnPropDesc = Object.getOwnPropertyDescriptor;
 var __getOwnPropNames = Object.getOwnPropertyNames;
+var __getProtoOf = Object.getPrototypeOf;
 var __hasOwnProp = Object.prototype.hasOwnProperty;
 var __export = (target, all) => {
   for (var name in all)
@@ -15,6 +17,10 @@ var __copyProps = (to, from, except, desc) => {
   }
   return to;
 };
+var __toESM = (mod, isNodeMode, target) => (target = mod != null ? __create(__getProtoOf(mod)) : {}, __copyProps(
+  isNodeMode || !mod || !mod.__esModule ? __defProp(target, "default", { value: mod, enumerable: true }) : target,
+  mod
+));
 var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: true }), mod);
 
 // src/index.ts
@@ -24,18 +30,29 @@ __export(src_exports, {
 });
 module.exports = __toCommonJS(src_exports);
 var import_material = require("@mui/material");
+var import_design_tokens = __toESM(require("@mact/design-tokens"));
 var primary = {
-  main: "#3b82f6"
+  main: import_design_tokens.default.colors.brand.main,
+  contrastText: "white"
+};
+var secondary = {
+  main: import_design_tokens.default.colors.brand.dark,
+  contrastText: "white"
 };
 var textColor = {
-  primary: "#222",
+  primary: import_design_tokens.default.colors.brand.dark,
   secondary: "#666",
   disabled: "#999"
 };
 var theme = (0, import_material.createTheme)({
   palette: {
     primary,
+    secondary,
     text: textColor
+  },
+  typography: {
+    fontSize: 14,
+    htmlFontSize: 16
   },
   components: {
     MuiButton: {

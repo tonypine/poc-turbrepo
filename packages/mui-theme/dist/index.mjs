@@ -1,19 +1,28 @@
 // src/index.ts
-import {
-  createTheme
-} from "@mui/material";
+import { createTheme } from "@mui/material";
+import tokens from "@mact/design-tokens";
 var primary = {
-  main: "#3b82f6"
+  main: tokens.colors.brand.main,
+  contrastText: "white"
+};
+var secondary = {
+  main: tokens.colors.brand.dark,
+  contrastText: "white"
 };
 var textColor = {
-  primary: "#222",
+  primary: tokens.colors.brand.dark,
   secondary: "#666",
   disabled: "#999"
 };
 var theme = createTheme({
   palette: {
     primary,
+    secondary,
     text: textColor
+  },
+  typography: {
+    fontSize: 14,
+    htmlFontSize: 16
   },
   components: {
     MuiButton: {

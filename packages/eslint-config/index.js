@@ -1,17 +1,13 @@
 module.exports = {
-  parser: '@typescript-eslint/parser',
-  // parserOptions: {
-  //   project: ["tsconfig.json"],
-  //   sourceType: "module",
-  //   tsconfigRootDir: __dirname,
-  // },
-  plugins: ['@typescript-eslint/eslint-plugin', 'simple-import-sort'],
   extends: ['next', 'airbnb', 'airbnb-typescript', 'prettier'],
+  parser: '@typescript-eslint/parser',
+  parserOptions: {
+    project: ['tsconfig.json'],
+    sourceType: 'module',
+  },
+  plugins: ['@typescript-eslint/eslint-plugin', 'simple-import-sort'],
   rules: {
-    'react/function-component-definition': [
-      2,
-      { namedComponents: 'arrow-function' },
-    ],
+    'no-restricted-exports': 0,
     'object-curly-newline': 0,
     quotes: [
       'error',
@@ -20,6 +16,13 @@ module.exports = {
         allowTemplateLiterals: false,
       },
     ],
-    'no-restricted-exports': 0,
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+      },
+    ],
+    'react/jsx-props-no-spreading': 1,
+    'react/react-in-jsx-scope': 'off',
   },
 };
