@@ -11,7 +11,7 @@ import {
 import {
   User as UserModel,
   Post as PostModel,
-  PrismaClient as Prisma,
+  Prisma,
 } from '@mact/prisma-client';
 import { PrismaService } from './prisma.service';
 

@@ -1,36 +1,3 @@
 {
-  "$schema": "https://json.schemastore.org/tsconfig",
-  "display": "Backend.js",
-  "compilerOptions": {
-    "allowJs": false,
-    "baseUrl": ".",
-    "esModuleInterop": true,
-    "forceConsistentCasingInFileNames": true,
-    "isolatedModules": true,
-    "jsx": "preserve",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "esnext"
-    ],
-    "module": "esnext",
-    "moduleResolution": "node",
-    "noEmit": true,
-    "resolveJsonModule": true,
-    "skipLibCheck": true,
-    "strict": true,
-    "target": "ESNext"
-  },
-  "exclude": [
-    "node_modules",
-    ".next",
-    "out"
-  ],
-  "extends": "@tsconfig/recommended/tsconfig.json",
-  "include": [
-    "next-env.d.ts",
-    "**/*.ts",
-    "**/*.tsx",
-    "**/*.js"
-  ]
+  "extends": "@tsconfig/recommended/tsconfig.json"
 }

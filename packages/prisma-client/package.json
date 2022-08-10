@@ -11,7 +11,7 @@
   "scripts": {
     "migrate": "prisma migrate dev && prisma generate",
     "build": "tsup",
-    "dev": "tsup --watch --format esm,cjs --dts"
+    "dev": "tsup --watch --dts-resolve"
   },
   "jest": {
     "collectCoverageFrom": [

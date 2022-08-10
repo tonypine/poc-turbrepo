@@ -1,5 +1,5 @@
 {
-  "extends": "@tsconfig/recommended/tsconfig.json",
+  "extends": "@mact/ts-config/backend.json",
   "include": ["src/*"],
   "exclude": ["node_modules", "**/*.spec.ts"],
 }

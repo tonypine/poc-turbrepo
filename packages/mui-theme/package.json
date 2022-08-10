@@ -8,6 +8,7 @@
     "typescript": "^4.7.4"
   },
   "devDependencies": {
+    "@mact/ts-config": "*",
     "@mui/x-data-grid": "^5.15.1",
     "@tsconfig/recommended": "^1.0.1",
     "tsup": "^6.2.1"
