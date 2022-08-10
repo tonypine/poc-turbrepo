@@ -1,0 +1,23 @@
+{
+  "extends": "@mact/ts-config/client.json",
+  "compilerOptions": {
+    "baseUrl": "./src"
+  },
+  "include": [
+    ".eslintrc.js",
+    "next-env.d.ts",
+    "src/**/*.js",
+    "src/**/*.ts",
+    "src/**/*.tsx"
+  ],
+  "exclude": [
+    "node_modules",
+    ".next",
+    "out"
+  ],
+  "paths": {
+    "src/*": [
+      "./src/*"
+    ]
+  }
+}
