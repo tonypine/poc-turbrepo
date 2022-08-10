@@ -12,9 +12,7 @@ dist/*
 /coverage
 
 # next.js
-**/.next
-**/apps/**/.next
-**/packages/
+.next
 /out/
 
 # production
